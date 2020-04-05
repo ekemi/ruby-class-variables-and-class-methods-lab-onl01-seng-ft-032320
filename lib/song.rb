@@ -39,27 +39,20 @@ class Song
           else
             hash[genre]+=1
           end
-      #
-      # if !hash[self.genre].include?(self.genre)
-      #     hash[self.genre] = []
-      #     hash[self.genre] << self.genre.count
-      #
-      #      binding.pry
-    # if !has[self.genre].include?(self.genre)
-    #   hash[self.genre] << self.count
     end
     hash
    end
 
    def self.artist_count
-     hash= {}
-     @@artists.each do |artist|
+     hash = {}
+   @@artists.each do |artist|
+         if !hash[artist]
+           hash[artist] =1
 
-       if !hash[artist]
-             hash[artist] = 1
-      else
-          hash[artist]+=1
-      end
-          hash
-     end
+         else
+           hash[artist]+=1
+         end
+    end
+       hash
+    
 end
